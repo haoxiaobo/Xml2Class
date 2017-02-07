@@ -101,7 +101,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ECM.xml" />
     <Content Include="getPartyWithContracts.req.xml" />
     <Content Include="getPartyWithContracts.resp.xml" />
     <Content Include="searchPerson.req.xml" />
