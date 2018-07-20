@@ -7,23 +7,42 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
+using Xml2Class;
 
 namespace XmlTester
 {
     [TestClass]
-    public class Test1
+    public class TestXml
     {
         [TestMethod]
         public void LoadAllXml()
         {
-            TestXmlLoadAndWrite(@"d:\mydocuments\haoxb01\my documents\visual studio 2015\Projects\Xml2Class\XmlTester\getPartyWithContracts.req.xml", typeof(getPartyWithContracts.req.TCRMServiceClass));
+            GenXmlClass(@"Xmls\searchPerson.req.xml");
+            GenXmlClass(@"Xmls\searchPerson.resp.xml");
+            GenXmlClass(@"Xmls\getPartyWithContracts.req.xml");
+            GenXmlClass(@"Xmls\getPartyWithContracts.resp.xml");
 
-            TestXmlLoadAndWrite(@"d:\mydocuments\haoxb01\my documents\visual studio 2015\Projects\Xml2Class\XmlTester\getPartyWithContracts.resp.xml", typeof(getPartyWithContracts.resp.TCRMServiceClass));
-
-            TestXmlLoadAndWrite(@"d:\mydocuments\haoxb01\my documents\visual studio 2015\Projects\Xml2Class\XmlTester\searchPerson.req.xml", typeof(searchPerson.req.TCRMServiceClass));
-
-            TestXmlLoadAndWrite(@"d:\mydocuments\haoxb01\my documents\visual studio 2015\Projects\Xml2Class\XmlTester\searchPerson.resp.xml", typeof(searchPerson.resp.TCRMServiceClass));
+            //TestXmlLoadAndWrite(@"Xmls\getPartyWithContracts.req.xml", typeof(getPartyWithContracts.req.TCRMServiceClass));
+            //TestXmlLoadAndWrite(@"Xmls\getPartyWithContracts.resp.xml", typeof(getPartyWithContracts.resp.TCRMServiceClass));
+            //TestXmlLoadAndWrite(@"Xmls\searchPerson.req.xml", typeof(searchPerson.req.TCRMServiceClass));
+            //TestXmlLoadAndWrite(@"Xmls\searchPerson.resp.xml", typeof(searchPerson.resp.TCRMServiceClass));
         }
+
+        private static void GenXmlClass(string sFileName)
+        {
+            var sMainFileName = Path.GetFileNameWithoutExtension(sFileName);
+            DatagramAnalyzor analyzor = new XmlAnalyzor();
+            var xci = analyzor.AnalysistDataFile(sFileName, Encoding.UTF8);
+
+            var sBasePath = @"..\..\GenCodes\TestXmlGen";
+            var sBaseNameSpace = sMainFileName;
+            ClassFileGeneratorBase cg = new CSharpGenerator();
+            cg.GenClasses(xci, sBaseNameSpace, sBasePath);
+
+            ClassFileGeneratorBase jg = new JavaGenerator();
+            jg.GenClasses(xci, sBaseNameSpace, sBasePath);
+        }
+
 
         private void TestXmlLoadAndWrite(string sInXmlFileName, Type type)
         {

@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>readme.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="%E8%BF%99%E4%B8%AA%E5%8F%91%E6%98%8E%E5%B9%B2%E4%BB%80%E4%B9%88%E7%94%A8%E7%9A%84%EF%BC%9F">这个发明干什么用的？</h1>
+<p>在开发中，我们会遇到两个系统对接的情况，系统之前需要传递一些数据，下面是一个XML数据报文的例子，这个例子中，系统A向系统B发送了两个个人客户的信息。</p>
+<h4 id="%E4%BB%A3%E7%A0%811%EF%BC%9A%E6%8A%A5%E6%96%87">代码1：报文</h4>
+<pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">PersonsData</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Custom</span> <span class="hljs-attr">Type</span>=<span class="hljs-string">"person"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Name</span>&gt;</span>张三<span class="hljs-tag">&lt;/<span class="hljs-name">Name</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Sex</span>&gt;</span>M<span class="hljs-tag">&lt;/<span class="hljs-name">Sex</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Cert</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">CertType</span>&gt;</span>01<span class="hljs-tag">&lt;/<span class="hljs-name">CertType</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">CertNo</span>&gt;</span>1101010101010101010<span class="hljs-tag">&lt;<span class="hljs-name">CertNo</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">Cert</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Custom</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Custom</span> <span class="hljs-attr">Type</span>=<span class="hljs-string">"person"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Name</span>&gt;</span>李四<span class="hljs-tag">&lt;/<span class="hljs-name">Name</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Sex</span>&gt;</span>M<span class="hljs-tag">&lt;/<span class="hljs-name">Sex</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Age</span>&gt;</span>20<span class="hljs-tag">&lt;/<span class="hljs-name">Age</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Cert</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">CertType</span>&gt;</span>02<span class="hljs-tag">&lt;/<span class="hljs-name">CertType</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">CertNo</span>&gt;</span>G8374387<span class="hljs-tag">&lt;<span class="hljs-name">CertNo</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">Cert</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Custom</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">PersonsData</span>&gt;</span>
+</div></code></pre>
+<p>双方系统要生成或是解析这些数据，在系统中都需要有对应的对象定义。如下：</p>
+<h4 id="%E4%BB%A3%E7%A0%812%EF%BC%9A%E5%AF%B9%E5%BA%94%E7%9A%84%E7%B1%BB%E5%AE%9A%E4%B9%89">代码2：对应的类定义</h4>
+<pre class="hljs"><code><div><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">PersonsDataClass</span> <span class="hljs-comment">// 根层级的对象</span>
+{
+    <span class="hljs-keyword">public</span> CustomClass[] Custom; <span class="hljs-comment">// 客户数组</span>
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">CustomClass</span>  <span class="hljs-comment">// 客户对象</span>
+{
+    [<span class="hljs-meta">XmlAttribute</span>]
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> Type;  
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> Name;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> Sex;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> Age;
+    <span class="hljs-keyword">public</span> CertClass Cert;
+}
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title">CertClass</span>
+{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> CertType;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">string</span> CertNo;
+}
+
+</div></code></pre>
+<p>通过这些类的定义，在程序中可以很方便地生成实际数据的报文:</p>
+<h4 id="%E4%BB%A3%E7%A0%813%EF%BC%9A%E6%BA%90%E7%B3%BB%E7%BB%9F%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%84%E8%A3%85%E3%80%81%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8E%E5%8F%91%E9%80%81">代码3：源系统中的数据组装、序列化与发送</h4>
+<pre class="hljs"><code><div><span class="hljs-comment">// 服务器生成报文的过程。</span>
+PersonDataClass pd = <span class="hljs-keyword">new</span> PersonDataCalss();
+<span class="hljs-comment">// 从数据库中取出数据，填充。下面是直接赋值的例子</span>
+pd.Custom = <span class="hljs-keyword">new</span> Custom[]{
+    <span class="hljs-keyword">new</span> Custom(){
+        Type=<span class="hljs-string">"person"</span>,
+        Name = <span class="hljs-string">"张三"</span>,        
+        Cert = <span class="hljs-keyword">new</span> CertClass(){
+            CertNo = <span class="hljs-string">"110293929392880912"</span>,
+            CertType=<span class="hljs-string">"01"</span>
+        }
+    },
+    <span class="hljs-keyword">new</span> Custom(){
+        Type=<span class="hljs-string">"person"</span>,
+        Name = <span class="hljs-string">"李四"</span>,
+        Age = <span class="hljs-number">20</span>,
+        Cert = <span class="hljs-keyword">new</span> CertClass(){
+            CertNo = <span class="hljs-string">"G41023"</span>,
+            CertType=<span class="hljs-string">"02"</span>
+        }
+    },
+ };
+
+<span class="hljs-keyword">string</span> xml = XmlSerializer.Serialize(pd);
+SendByInternet(SystemB_Url, xml); <span class="hljs-comment">// 发送到网络上的系统B</span>
+</div></code></pre>
+<p>或是在接收方（system B)解析它们为对象：</p>
+<h4 id="%E4%BB%A3%E7%A0%814%EF%BC%9A%E6%8E%A5%E6%94%B6%E6%96%B9%E7%9A%84%E6%8A%A5%E6%96%87%E8%A7%A3%E6%9E%90">代码4：接收方的报文解析</h4>
+<pre class="hljs"><code><div><span class="hljs-keyword">string</span> xml = <span class="hljs-keyword">this</span>.request.Body; <span class="hljs-comment">// 从网络取得的报文</span>
+
+PersonDataClass pd;
+pd = (PersonDataClass)XmlSerializer.DeSerialize(xml);
+</div></code></pre>
+<h4 id="%E5%AE%9E%E9%99%85%E6%83%85%E5%86%B5">实际情况</h4>
+<p>上面的过程中，发送方与接受方两个系统中需要有相同的代码2（类定义）。但在实际的工作中，两端的系统常常不是同样的技术平台，无法共享相同的代码。或是系统B得不到任何系统A的设计文档，只能得到实际运行中截取的数据报文。</p>
+<p>因此，通过分析数据报文来得到代码2中的类定义代码，是经常要进行的工作。</p>
+<p>这个工作传统情况下，是通过人工的分析与手工定义来实现的。但这种方式下，工作量大，容易出错，特别是在报文非常复杂、层次很深的时候，人工分析要保证正确几乎不可能。在我们处理过的一个报文里，有几千行的的数据，涉及的对象层到6层深，各类对象十几种，属性达上百个。</p>
+<p><strong>本发明的工作就是把这个人工作业改为自动化分析。</strong></p>
+<h1 id="%E5%85%B3%E4%BA%8E%E5%85%B6%E5%AE%83%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98">关于其它的一些问题</h1>
+<h2 id="%E7%B1%BB%E5%AE%9A%E4%B9%89%E6%98%AF%E4%BB%80%E4%B9%88">类定义是什么</h2>
+<p>如上面代码2中的示例。</p>
+<h2 id="%E6%A0%91%E7%8A%B6%E7%9A%84%E8%8A%82%E7%82%B9%E7%BB%93%E6%9E%84">树状的节点结构</h2>
+<p>指代码1中的报文结构。其中各个层次的对象形成了树状的结构。</p>
+<h2 id="%E5%AF%B9%E8%B1%A1%E5%AD%97%E5%85%B8">对象字典</h2>
+<p>“字典”指得的是“键-值(Key-Value”对的<strong>集合</strong>（对，是个集合）。这是计算机算法中常用的一种数据结构，用于根据一个名字，来方便地查找到对应的项目。</p>
+<p>如下是一个字典，在这个字典中，以字符串做键，以整数做值：</p>
+<pre class="hljs"><code><div>&quot;a&quot;:1,
+&quot;b&quot;:5,
+&quot;c&quot;:10,
+&quot;d&quot;:3,
+&quot;e&quot;:5
+……
+</div></code></pre>
+<p>在这个字典中，给出a, 则可以得到对应的整数1，给出d，则可以得到对应的整数3.</p>
+<p>在本发明中，字典被用来保存已经识别出来的数据对象，每个数据对象都以其名字做为“键”来保存在字典中。一开始，程序会初始化一个空的字典，即你说的空集，在遍历分析数据报文的过程中，被识别出来的对象会被放入这个字典（也即集合）中，根据发现的对象、对象内部的字段而补充数据模型。</p>
+<p>“如发现有之前的定义存在”，指得是：数据报文中的一个对象（如custom)被第一次发现时（张三），在这个集合中增加一个对象的记录。第二次发现时（李四），同样的对象不会重建，而是在字典中（集合中）之前已经有的记录的对象上，补充更新发新的字段。</p>
+<p>对象的“属性”，即“字段”，在编程中，这两个术语几乎是同义的。</p>
+<h1 id="%E4%B9%8B%E5%89%8D%E6%9C%89%E5%AE%9A%E4%B9%89%E5%AD%98%E5%9C%A8%EF%BC%8C%E8%BF%99%E4%B8%AA%E4%B9%8B%E5%89%8D%E6%98%AF%E6%8C%87%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E5%AE%9A%E4%B9%89%E5%AD%98%E5%9C%A8%EF%BC%9F">之前有定义存在，这个之前是指什么时候定义存在？</h1>
+<h2 id="%E5%90%88%E5%B9%B6%E5%AD%97%E6%AE%B5%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D">合并字段是什么意思</h2>
+<p>注意一下代码1中的报文：</p>
+<p>第一个客户的报文中没有age字段，但在第二个客户报文中，这个字段出现了。</p>
+<p>代码分析工作中，通过对第一个客户的信息分析，定义了CustomClass类，在对第二个客户的信息分析中，发现了这个字段，需要被合并加入已经定义好的CustomClass类，并意识到这个字段是“可空”的。</p>
+<p>人工分析要处理这个问题，自动化分析中也需要处理这个问题。</p>
+
+</body>
+</html>

@@ -12,23 +12,18 @@ namespace Xml2ClassMain
     {
         static void Main(string[] args)
         {
-            GenXmlClass(@"D:\MyDocuments\haoxb01\My Documents\Visual Studio 2015\Projects\Xml2Class\XmlTester\searchPerson.req.xml");
-            GenXmlClass(@"D:\MyDocuments\haoxb01\My Documents\Visual Studio 2015\Projects\Xml2Class\XmlTester\searchPerson.resp.xml");
-            GenXmlClass(@"D:\MyDocuments\haoxb01\My Documents\Visual Studio 2015\Projects\Xml2Class\XmlTester\getPartyWithContracts.req.xml");
-            GenXmlClass(@"D:\MyDocuments\haoxb01\My Documents\Visual Studio 2015\Projects\Xml2Class\XmlTester\getPartyWithContracts.resp.xml");
-            GenXmlClass(@"D:\MyDocuments\haoxb01\My Documents\Visual Studio 2015\Projects\Xml2Class\XmlTester\ecm.xml");
+            byte[] ar = new byte[] {
+ 0xD0, 0x28 , 0x18 , 0x0E , 0xE4 , 0x2A , 0x16, 0x2D, 0xCC, 0x3C, 0x32, 0x91, 0xC0, 0xF8, 0x10, 0xCC, 0x89, 0x76, 0xF9, 0xA5, 0x0A, 0xC6, 0x3E, 0xF9, 0xCA, 0xBC, 0x01, 0x0E, 0xBB, 0x59, 0x5C, 0x9C };
+
+            var sBase64 = Convert.ToBase64String(ar);
+
+
+
+            return;
+
+         
         }
 
-        private static void GenXmlClass(string sFileName)
-        {
-           var sMainFileName = Path.GetFileNameWithoutExtension(sFileName);
 
-            var xci = Xml2Class.XmlAnalyzor.AnalysistXmlFile(sFileName, Encoding.UTF8);
-
-            var sBasePath = @"D:\MyDocuments\haoxb01\My Documents\Visual Studio 2015\Projects\Xml2Class\XmlTester";
-            var sBaseNameSpace = sMainFileName;
-            ClassFileGeneratorBase cg = new CSharpGenerator();
-            cg.GenClasses(xci, sBaseNameSpace, sBasePath);
-        }
     }
 }

@@ -12,10 +12,12 @@ namespace Xml2Class
     /// 类定义
     /// </summary>
     [XmlInclude(typeof(XmlClassDef))]
-    public class XmlClassDef
+    public class XmlClassDef : ClassDef
     {
-        public string FullName {
-            get {
+        public string FullName
+        {
+            get
+            {
                 if (string.IsNullOrWhiteSpace(this.XmlPreFix))
                 {
                     return Name;
@@ -27,10 +29,7 @@ namespace Xml2Class
             }
         }
 
-        /// <summary>
-        /// 类名，字典值
-        /// </summary>
-        public string Name { get; set; }
+
 
         /// <summary>
         /// 命名空间
@@ -39,40 +38,34 @@ namespace Xml2Class
 
         public string XmlPreFix { get; set; }
 
-        /// <summary>
-        /// 是否根对象
-        /// </summary>
-        public bool IsRoot { get; set; }
 
-        /// <summary>
-        /// 属性清单，以属性名为索引。
-        /// </summary>
-        public Dictionary<string, XmlPropertyDef> Properties { get; set; }
+
+
     }
 
-    public class NameSpaceDef
+    public class XmlNameSpaceDef
     {
-        public string NameSpaceUri { get; set; }
-        public string PreFix { get; set; }
+        public string XmlNameSpaceUri { get; set; }
+        public string XmlPreFix { get; set; }
     }
 
-    public class XmlClassesInfo
+    public class XmlClassesInfo : ClassesInfo
     {
-        public Dictionary<string, XmlClassDef> dicClasses { get; set; } = new Dictionary<string, XmlClassDef>();
+
         public XmlDocumentType DocType { get; internal set; }
-        public Dictionary<string, NameSpaceDef> dicNameSpaces { get; set; } = new Dictionary<string, NameSpaceDef>();
+        public Dictionary<string, XmlNameSpaceDef> dicNameSpaces { get; set; } = new Dictionary<string, XmlNameSpaceDef>();
 
-        private Dictionary<string, NameSpaceDef> dicFix2NameSpaces { get; set; } = new Dictionary<string, NameSpaceDef>();
+        private Dictionary<string, XmlNameSpaceDef> dicFix2NameSpaces { get; set; } = new Dictionary<string, XmlNameSpaceDef>();
 
         public void AddNameSpace(string sNameSpaceUri, string sPrefix)
         {
             if (string.IsNullOrWhiteSpace(sNameSpaceUri))
                 return;
 
-            var ns = new NameSpaceDef()
+            var ns = new XmlNameSpaceDef()
             {
-                NameSpaceUri = sNameSpaceUri,
-                PreFix = sPrefix
+                XmlNameSpaceUri = sNameSpaceUri,
+                XmlPreFix = sPrefix
             };
             this.dicNameSpaces[sNameSpaceUri] = ns;
             this.dicFix2NameSpaces[sPrefix] = ns;
@@ -80,20 +73,20 @@ namespace Xml2Class
 
         public string GetNameSpaceUriByPreFix(string sPrefix)
         {
-            NameSpaceDef nsd;
+            XmlNameSpaceDef nsd;
             if (this.dicFix2NameSpaces.TryGetValue(sPrefix, out nsd))
             {
-                return nsd.NameSpaceUri;
+                return nsd.XmlNameSpaceUri;
             }
             return null;
         }
 
         public string GetPreFixByNameSpaceUri(string sNameSpaceUri)
         {
-            NameSpaceDef nsd;
+            XmlNameSpaceDef nsd;
             if (this.dicNameSpaces.TryGetValue(sNameSpaceUri, out nsd))
             {
-                return nsd.PreFix;
+                return nsd.XmlPreFix;
             }
             return null;
         }
@@ -102,81 +95,26 @@ namespace Xml2Class
     /// <summary>
     /// 属性定义
     /// </summary>
-    public class XmlPropertyDef
+    public class XmlPropertyDef : PropertyDef
     {
-        /// <summary>
-        /// 属性名
-        /// </summary>
-        public string Name { get; set; }
-
-        /// <summary>
-        /// 是否是多对象？
-        /// </summary>
-        public bool IsMulti { get; set; } = false;
-
         public string XmlNameSpaceUri { get; set; } = "";
 
-
         public string XmlPreFix { get; set; }
-
-
-        /// <summary>
-        /// 属性类型定义
-        /// </summary>
-        public string TypeName { get; set; }
 
         /// <summary>
         /// 值从何来？子元素还是属性？
         /// </summary>
-        public XmlValueSource ValueSource {get; set;}
-
-        /// <summary>
-        /// 是否非空？
-        /// </summary>
-        public bool NotNull { get; set; } = false;
-
-        /// <summary>
-        /// 示例值。
-        /// </summary>
-        public Dictionary<string, string> ExampleValues { get; internal set; }
-
-        internal void AddExampleValue(string s)
-        {
-            if (this.ExampleValues == null)
-            {
-                this.ExampleValues = new Dictionary<string, string>();
-            }
-            var sLeft = this.GetLeft(s, 50, true);
-            this.ExampleValues[sLeft] = sLeft;
-        }
-
-       private string GetLeft(string s, int len, bool bAddDot)
-        {
-            if (s == null)
-                return "";
-
-            if (bAddDot)
-            {
-                len = len - 3;
-                if (len < 0)
-                    len = 0;
-            }
-            if (s.Length > len)
-            {
-                return s.Substring(0, len) + (bAddDot ? "..." : "");
-            }
-            else
-                return s;
-        }
+        public XmlValueSource ValueSource { get; set; }
     }
 
 
-    
+
 
     /// <summary>
     /// 值从哪里来？子元素，或是属性？
     /// </summary>
-    public enum XmlValueSource {
+    public enum XmlValueSource
+    {
         /// <summary>
         /// 从子元素来
         /// </summary>

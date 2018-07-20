@@ -9,6 +9,6 @@ namespace Xml2Class
 {
     public abstract class ClassFileGeneratorBase
     {
-        public abstract void GenClasses(XmlClassesInfo xci, string sBaseNameSpace, string sBasePath);
+        public abstract void GenClasses(ClassesInfo xci, string sBaseNameSpace, string sBasePath);
     }
 }

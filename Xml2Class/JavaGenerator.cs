@@ -9,7 +9,7 @@ using System.Xml.Serialization;
 
 namespace Xml2Class
 {
-    public class CSharpGenerator : ClassFileGeneratorBase
+    public class JavaGenerator : ClassFileGeneratorBase
     {
         public override void GenClasses(ClassesInfo xci, string sBaseNameSpace, string sBasePath)
         {   
@@ -30,7 +30,7 @@ namespace Xml2Class
             else
                 sPath = Path.Combine(sBasePath, sBaseNameSpace);
 
-            string sFileName = c.Name + ".gen.cs";
+            string sFileName = c.Name + ".gen.java";
             if (!Directory.Exists(sPath))
             {
                 Directory.CreateDirectory(sPath);
@@ -72,12 +72,8 @@ namespace Xml2Class
             sw.WriteLine(@"//---------------------------------------------------");
 
             sw.WriteLine(
-@"using System;
-using System.Collections.Generic;
-using System.Xml;
-using System.Xml.Serialization;
-using System.Linq; 
-using {0};
+@"import java.lang;
+import {0};
 ",
 sBaseNameSpace);
 
@@ -102,21 +98,21 @@ sBaseNameSpace);
             XmlClassDef xc = c as XmlClassDef;
 
             sw.WriteLine(@"
-    /// <summary>
-    /// {0} 类
-    /// </summary>", xc?.FullName??c.Name);
-            sw.WriteLine("    [Serializable]");
+    /***
+    * {0} 类
+    **/", xc?.FullName??c.Name);
+            sw.WriteLine("    @Serializable");
             if (c.IsRoot) {
-                sw.WriteLine("    [XmlRoot(ElementName = \"{0}\",Namespace = \"{1}\")]", c.Name, xc?.XmlNameSpaceUri);
+                sw.WriteLine("    @XmlRoot(ElementName = \"{0}\",Namespace = \"{1}\")", c.Name, xc?.XmlNameSpaceUri);
 
                 foreach (var cls in xci.dicClasses.Values)
                 {
                     var xcls = cls as XmlClassDef; 
-                    sw.WriteLine("    [XmlInclude(typeof({0}Class))]", xcls?.FullName??cls.Name);
+                    sw.WriteLine("    @XmlInclude(typeof({0}Class))", xcls?.FullName??cls.Name);
                 }
             }
             sw.WriteLine(
-@"    public partial class {0}
+@"    public class {0}
     {{",
      c.Name
 );
@@ -136,36 +132,54 @@ sBaseNameSpace);
 
             sw.WriteLine(
             @"
-        /// <summary>
-        /// {0}
-        /// </summary>", pd.Name);
+        /*** 
+        * {0}", pd.Name);
+
+           
 
             if (pd.ExampleValues != null && pd.ExampleValues.Values.Count != 0)
-            {
-                sw.WriteLine("        /// <example>{0}</example>", 
+            {   
+                sw.WriteLine("        * example: {0}", 
                     this.GetExampleText(pd.ExampleValues));
+                
             }
-            
+            sw.WriteLine("        */");
+
+            StringBuilder sb = new StringBuilder();
             if (xpd?.ValueSource == XmlValueSource.Attribute)
             {
-                sw.WriteLine("        [XmlAttribute]");
+                sb.AppendLine();
+                sb.AppendFormat("        @XmlAttribute");
+                
             }
             else if (xpd?.ValueSource == XmlValueSource.Text)
             {
-                sw.WriteLine("        [XmlText]");
+                sb.AppendLine();
+                sb.AppendFormat("        @XmlText");
+               
             }
             else if(xpd?.ValueSource == XmlValueSource.SubElement)
             {
-                sw.WriteLine("        [XmlElement(ElementName = \"{0}\", Namespace = \"{1}\")]",
+                sb.AppendLine();
+                sb.AppendFormat("        @XmlElement(ElementName = \"{0}\", Namespace = \"{1}\")",
                     pd.Name, xpd?.XmlNameSpaceUri
                     );
             }
 
             string sType = Convert2CsharpType(pd.Type);
 
-            sw.WriteLine("        public {0}{1} {2} {{ get; set; }}", pd.Type,
-                 
-                pd.IsMulti?"[]":"", pd.Name);
+            sw.WriteLine(
+@"        private {0}{1} _{2};
+        {3}
+        public {0}{1} get{2}() {{
+             return this._{2};
+        }}
+        {3}
+        public void set{2}({0}{1} val){{
+             this._{2} = val;
+        }}
+", 
+                pd.Type, pd.IsMulti?"[]":"", UpcaseFirstLatter(pd.Name), sb.ToString());
         }
 
         private string Convert2CsharpType(string type)
@@ -186,6 +200,18 @@ sBaseNameSpace);
                 })
                 .ToArray()
                 );
+        }
+
+        private string UpcaseFirstLatter(string sWord)
+        {
+            if (string.IsNullOrWhiteSpace(sWord))
+            {
+                return "";
+            }
+
+            var arrWord = sWord.Trim().ToCharArray();
+            arrWord[0] = char.ToUpper(arrWord[0]);
+            return new string(arrWord);
         }
     }
 }

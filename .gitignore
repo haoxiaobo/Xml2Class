@@ -9,3 +9,6 @@
 /Xml2ClassMain/bin
 /XmlTester/obj
 /XmlTester/bin
+/.vs
+/packages/Newtonsoft.Json.11.0.2
+/XmlTester/GenCodes

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TCRMService  xmlns="http://www.ibm.com/mdm/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ibm.com/mdm/schema MDMDomains.xsd">
+    <RequestControl>
+        <!-- 年月日时分秒 -->
+        <requestID>20170418140322</requestID>
+        <DWLControl>
+            <!-- 请求系统缩写名 -->
+            <requesterName>TLIFE</requesterName>
+            <requesterLanguage>400</requesterLanguage>
+        </DWLControl>
+    </RequestControl>
+    <TCRMInquiry>
+        <InquiryType>getBriefContractsByParty</InquiryType>
+        <InquiryParam>
+            <!-- 客户PartyID -->
+            <tcrmParam  name="PartyId">267127970085124990</tcrmParam>
+            <!-- 查询级别 -->
+            <tcrmParam  name="InquiryLevel">1</tcrmParam>
+        </InquiryParam>
+    </TCRMInquiry>
+</TCRMService>

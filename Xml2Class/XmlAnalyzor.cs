@@ -6,11 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
+
 namespace Xml2Class
 {
-    public class XmlAnalyzor
+    public class XmlAnalyzor: DatagramAnalyzor
     {
-        public static XmlClassesInfo AnalysistXml(string sXml)
+        public override ClassesInfo AnalysistDatagram(string sXml)
         {
             XmlClassesInfo xci = new XmlClassesInfo();
 
@@ -18,15 +19,13 @@ namespace Xml2Class
             doc.LoadXml(sXml);
 
             xci.DocType = doc.DocumentType;
-            
             var ele = doc.DocumentElement;
-
             AnalysistXmlEle(ele,  xci);
      
             return xci;
         }
 
-        private static XmlClassDef AnalysistXmlEle(XmlElement ele, XmlClassesInfo xci)
+        private XmlClassDef AnalysistXmlEle(XmlElement ele, XmlClassesInfo xci)
         {
             // 0 如果是简单元素，直接返回null就好
             if (IsSimplyElement(ele))
@@ -39,7 +38,7 @@ namespace Xml2Class
             c = new XmlClassDef()
             {
                 IsRoot = xci.dicClasses.Count == 0,
-                Name = ele.LocalName,
+                Name = ele.LocalName + "Class",
                 XmlNameSpaceUri = ele.NamespaceURI,
                 XmlPreFix = ele.Prefix,
             };
@@ -51,7 +50,7 @@ namespace Xml2Class
             // 1.1 如果此类型已经存在，那么用旧类型。
             if (xci.dicClasses.ContainsKey(c.FullName))
             {
-                c = xci.dicClasses[c.FullName];
+                c = xci.dicClasses[c.FullName] as XmlClassDef;
             }
             else
             {
@@ -61,11 +60,11 @@ namespace Xml2Class
             
             if (c.Properties == null)
             {
-                c.Properties = new Dictionary<string, XmlPropertyDef>();
+                c.Properties = new Dictionary<string, PropertyDef>();
             }
 
             // 本节点下的属性列表
-            var thisPropertys = new Dictionary<string, XmlPropertyDef>();
+            var thisPropertys = new Dictionary<string, PropertyDef>();
 
             // 2.遍历所有的属性
 
@@ -83,13 +82,13 @@ namespace Xml2Class
                 XmlPropertyDef pd = null;
                 if (thisPropertys.ContainsKey(att.LocalName))
                 {
-                    pd = c.Properties[att.LocalName]; // 一定存在
+                    pd = c.Properties[att.LocalName] as XmlPropertyDef; // 一定存在
                     pd.IsMulti = true;
                     pd.AddExampleValue(att.Value);
                 }
                 else if (c.Properties.ContainsKey(att.LocalName)) // 如果本节点不存在但过去有存在。
                 {
-                    pd = c.Properties[att.LocalName]; // 一定存在
+                    pd = c.Properties[att.LocalName] as XmlPropertyDef; // 一定存在
                     pd.AddExampleValue(att.Value);
                     pd.NotNull = false;
                 }
@@ -101,7 +100,7 @@ namespace Xml2Class
                         Name = att.LocalName,
                         IsMulti = false,
                         NotNull = false,
-                        TypeName = "string",
+                        Type = "string",
                         ValueSource = XmlValueSource.Attribute,
                         XmlNameSpaceUri = att.NamespaceURI,
                         XmlPreFix = att.Prefix,
@@ -130,12 +129,12 @@ namespace Xml2Class
                 // 3.3 如果此属性名在属性里已经存在，那么将之改为多重模式
                 if (thisPropertys.ContainsKey(subele.LocalName))
                 {
-                    pd = c.Properties[subele.LocalName]; // 一定存在
+                    pd = c.Properties[subele.LocalName] as XmlPropertyDef; // 一定存在
                     pd.IsMulti = true;
                 }
                 else if (c.Properties.ContainsKey(subele.LocalName)) // 如果本节点不存在但过去有存在。
                 {
-                    pd = c.Properties[subele.LocalName]; // 一定存在
+                    pd = c.Properties[subele.LocalName] as XmlPropertyDef; // 一定存在
                     pd.NotNull = false;
                 }
                 else
@@ -146,7 +145,7 @@ namespace Xml2Class
                         Name = subele.LocalName,
                         IsMulti = false,
                         NotNull = false,
-                        TypeName = "string",
+                        Type = "string",
                         ValueSource = XmlValueSource.SubElement,
                         XmlNameSpaceUri = subele.NamespaceURI,
                         XmlPreFix = subele.Prefix,
@@ -164,7 +163,7 @@ namespace Xml2Class
                 // 3.2 如果没有返回空，那么该属性改为对应的类型。
                 if (clsdef != null)
                 {
-                    pd.TypeName = clsdef.FullName;
+                    pd.Type = clsdef.FullName;
                 }
                 else
                 {
@@ -188,7 +187,7 @@ namespace Xml2Class
                         Name = "Text",
                         IsMulti = false,
                         NotNull = false,
-                        TypeName = "string",
+                        Type = "string",
                         ValueSource = XmlValueSource.Text,
                     };
                     pdText.AddExampleValue(ele.InnerText);
@@ -199,7 +198,7 @@ namespace Xml2Class
             return c;
         }
 
-        private static bool IsSimplyElement(XmlElement ele)
+        private bool IsSimplyElement(XmlElement ele)
         {
             var iAttrCount = 0;
             foreach (XmlAttribute att in ele.Attributes)
@@ -229,16 +228,6 @@ namespace Xml2Class
                 return true;
             }
             return false;
-        }
-
-        public static XmlClassesInfo AnalysistXmlFile(string sFileName, Encoding en)
-        {
-            using (var sr = new StreamReader(sFileName, en, true))
-            {
-                string sXml = sr.ReadToEnd();
-                sr.Close();
-                return AnalysistXml(sXml);
-            }
         }
     }
 }
