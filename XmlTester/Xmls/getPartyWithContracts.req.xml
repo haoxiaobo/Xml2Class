@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TCRMService SYSTEM "myTCRM.dtd">
+<TCRMService>
+	<RequestControl>
+		<requestID>100185</requestID>
+		<DWLControl>
+			<requesterName>Hickery Duck</requesterName>
+			<requesterLanguage>400</requesterLanguage>
+		</DWLControl>
+	</RequestControl>
+	<TCRMInquiry>
+		<InquiryType>getPartyWithContracts</InquiryType>
+		<InquiryParam>
+			<tcrmParam name="PartyId">823XXXXXXXX6616</tcrmParam>
+			<tcrmParam name="PartyInquiryLevel">0</tcrmParam>
+			<tcrmParam name="ContractInquiryLevel">1</tcrmParam>
+		</InquiryParam>
+	</TCRMInquiry>
+</TCRMService>

@@ -1,0 +1,11 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/Xml2Class/obj
+/Xml2Class/bin
+/.vs/Xml2Class/v14
+/XmlTester/obj
+/XmlTester/bin
+/.vs
+/packages

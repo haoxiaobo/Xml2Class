@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TCRMService SYSTEM "mdm.dtd">
+<TCRMService test="true" >
+	<ResponseControl>
+		<ResultCode>SUCCESS</ResultCode>
+		<ServiceTime>202</ServiceTime>
+		<DWLControl>
+			<requesterLanguage>400</requesterLanguage>
+			<requesterLocale>zh</requesterLocale>
+			<requesterName>Hickery Duck</requesterName>
+			<requestID>100185</requestID>
+		</DWLControl>
+	</ResponseControl>
+	<TxResponse>
+		<RequestType>getPartyWithContracts</RequestType>
+		<TxResult>
+			<ResultCode>SUCCESS</ResultCode>
+		</TxResult>
+		<ResponseObject>
+			<TCRMFSPartyBObj>
+				<DWLStatus>
+					<Status>0</Status>
+				</DWLStatus>
+				<TCRMContractBObj>
+					<ComponentID>2100023</ComponentID>
+					<BillingType>3</BillingType>
+					<BillingValue>转账收费</BillingValue>
+					<BusOrgunitId>G</BusOrgunitId>
+					<AgreementName>XXXXXXXX年金保障计划</AgreementName>
+					<AgreementNickName>A28</AgreementNickName>
+					<ExecutedDate>2017-01-02 00:00:00.0</ExecutedDate>
+					<AgreementStatusType>23</AgreementStatusType>
+					<AgreementStatusValue>有效</AgreementStatusValue>
+					<ContractIdPK>3566778110</ContractIdPK>
+					<ContractLangType>400</ContractLangType>
+					<ContractLangValue>中文（简体）</ContractLangValue>
+					<ContractLastUpdateDate>2017-01-05 05:22:24.0</ContractLastUpdateDate>
+					<ContractLastUpdateUser>MDM_ETL</ContractLastUpdateUser>
+					<CurrencyType>1</CurrencyType>
+					<CurrencyValue>中国人民币元</CurrencyValue>
+					<FrequencyModeType>1</FrequencyModeType>
+					<FrequencyModeValue>每年</FrequencyModeValue>
+					<LineOfBusiness>CSC</LineOfBusiness>
+					<NextBillingDate>2018-01-02 00:00:00.0</NextBillingDate>
+					<PremiumAmount>30000.000</PremiumAmount>
+					<ServiceOrgName>GP1</ServiceOrgName>
+					<ServiceProvId>GFGP1P110</ServiceProvId>
+					<DWLStatus>
+						<Status>0</Status>
+					</DWLStatus>
+					<TCRMAdminNativeKeyBObj>
+						<AdminContractId>G152XXXXX</AdminContractId>
+						<AdminFieldNameType>1</AdminFieldNameType>
+						<AdminFieldNameValue>个险保单号</AdminFieldNameValue>
+						<AdminNativeKeyIdPK>1667706244</AdminNativeKeyIdPK>
+						<AdminSystemType>1</AdminSystemType>
+						<AdminSystemValue>CSC</AdminSystemValue>
+						<ContractId>3566778110</ContractId>
+						<NativeKeyLastUpdateDate>2017-01-02 03:32:21.0</NativeKeyLastUpdateDate>
+						<NativeKeyLastUpdateUser>MDM_ETL</NativeKeyLastUpdateUser>
+					</TCRMAdminNativeKeyBObj>
+					<TCRMContractComponentBObj>
+						<ComponentID>2200030</ComponentID>
+						<BaseIndicator>Y</BaseIndicator>
+						<ContractComponentIdPK>XXXXXXXX</ContractComponentIdPK>
+						<ContractComponentLastUpdateDate>2017-01-04 02:29:17.0</ContractComponentLastUpdateDate>
+						<ContractComponentLastUpdateUser>MDM_ETL</ContractComponentLastUpdateUser>
+						<ContractComponentType>1</ContractComponentType>
+						<ContractComponentValue>主险</ContractComponentValue>
+						<ContractId>3566778110</ContractId>
+						<ContractStatusType>23</ContractStatusType>
+						<ContractStatusValue>有效</ContractStatusValue>
+						<PremiumAmount>30000.000</PremiumAmount>
+						<TCRMAdminNativeKeyBObj>
+							<AdminContractId>G152XXXX0010100</AdminContractId>
+							<AdminFieldNameType>101</AdminFieldNameType>
+							<AdminFieldNameValue>个险保障计划编号</AdminFieldNameValue>
+							<AdminNativeKeyIdPK>1667945855</AdminNativeKeyIdPK>
+							<AdminSystemType>1</AdminSystemType>
+							<AdminSystemValue>CSC</AdminSystemValue>
+							<ContractComponentIndicator>Y</ContractComponentIndicator>
+							<ContractId>XXXXXXXX</ContractId>
+							<NativeKeyLastUpdateDate>2017-01-02 04:53:05.0</NativeKeyLastUpdateDate>
+							<NativeKeyLastUpdateUser>MDM_ETL</NativeKeyLastUpdateUser>
+						</TCRMAdminNativeKeyBObj>
+						<TCRMContractPartyRoleBObj>
+							<ContractComponentId>XXXXXXXX</ContractComponentId>
+							<ContractPartyRoleLastUpdateDate>2017-01-02 04:53:05.0</ContractPartyRoleLastUpdateDate>
+							<ContractPartyRoleLastUpdateUser>MDM_ETL</ContractPartyRoleLastUpdateUser>
+							<ContractRoleIdPK>2387028175</ContractRoleIdPK>
+							<PartyId>823XXXXXXXX6616</PartyId>
+							<RoleType>1</RoleType>
+							<RoleValue>投保人</RoleValue>
+							<StartDate>2017-01-02 04:53:05.0</StartDate>
+						</TCRMContractPartyRoleBObj>
+						<TCRMContractPartyRoleBObj>
+							<ContractComponentId>XXXXXXXX</ContractComponentId>
+							<ContractPartyRoleLastUpdateDate>2017-01-02 06:40:28.0</ContractPartyRoleLastUpdateDate>
+							<ContractPartyRoleLastUpdateUser>MDM_ETL</ContractPartyRoleLastUpdateUser>
+							<ContractRoleIdPK>XXXXXXXX</ContractRoleIdPK>
+							<PartyId>823XXXXXXXX6616</PartyId>
+							<RoleType>2</RoleType>
+							<RoleValue>被保人</RoleValue>
+							<StartDate>2017-01-02 06:40:28.0</StartDate>
+						</TCRMContractPartyRoleBObj>
+						<TCRMContractPartyRoleBObj>
+							<ContractComponentId>XXXXXXXX</ContractComponentId>
+							<ContractPartyRoleLastUpdateDate>2017-01-03 05:12:01.0</ContractPartyRoleLastUpdateDate>
+							<ContractPartyRoleLastUpdateUser>MDM_ETL</ContractPartyRoleLastUpdateUser>
+							<ContractRoleIdPK>2387373133</ContractRoleIdPK>
+							<DistributionPercentage>100.00</DistributionPercentage>
+							<PartyId>823XXXXXXXX6616</PartyId>
+							<RoleType>31</RoleType>
+							<RoleValue>生存受益人－第一顺序</RoleValue>
+							<StartDate>2017-01-02 00:00:00.0</StartDate>
+						</TCRMContractPartyRoleBObj>
+						<TCRMExtension>
+							<ExtendedObject>XContractComponentBObjExt</ExtendedObject>
+							<XContractComponentBObjExt>
+								<XProductCode>A28P</XProductCode>
+								<XProductName>XXXXXXXX祝寿金期</XProductName>
+								<XInsuredAmount>43342.80</XInsuredAmount>
+								<XContractComponentLastUpdateDate>2017-01-04 02:29:17.0</XContractComponentLastUpdateDate>
+								<XContractComponentLastUpdateUser>MDM_ETL</XContractComponentLastUpdateUser>
+							</XContractComponentBObjExt>
+						</TCRMExtension>
+					</TCRMContractComponentBObj>
+					<TCRMContractComponentBObj>
+						<ComponentID>2200030</ComponentID>
+						<ContractComponentIdPK>XXXXXXXX</ContractComponentIdPK>
+						<ContractComponentLastUpdateDate>2017-01-04 02:29:17.0</ContractComponentLastUpdateDate>
+						<ContractComponentLastUpdateUser>MDM_ETL</ContractComponentLastUpdateUser>
+						<ContractComponentType>2</ContractComponentType>
+						<ContractComponentValue>附加险</ContractComponentValue>
+						<ContractId>3566778110</ContractId>
+						<ContractStatusType>23</ContractStatusType>
+						<ContractStatusValue>有效</ContractStatusValue>
+						<TCRMAdminNativeKeyBObj>
+							<AdminContractId>G152XXXX0010101</AdminContractId>
+							<AdminFieldNameType>101</AdminFieldNameType>
+							<AdminFieldNameValue>个险保障计划编号</AdminFieldNameValue>
+							<AdminNativeKeyIdPK>XXXXXXXX</AdminNativeKeyIdPK>
+							<AdminSystemType>1</AdminSystemType>
+							<AdminSystemValue>CSC</AdminSystemValue>
+							<ContractComponentIndicator>Y</ContractComponentIndicator>
+							<ContractId>XXXXXXXX</ContractId>
+							<NativeKeyLastUpdateDate>2017-01-02 04:53:05.0</NativeKeyLastUpdateDate>
+							<NativeKeyLastUpdateUser>MDM_ETL</NativeKeyLastUpdateUser>
+						</TCRMAdminNativeKeyBObj>
+						<TCRMContractPartyRoleBObj>
+							<ContractComponentId>XXXXXXXX</ContractComponentId>
+							<ContractPartyRoleLastUpdateDate>2017-01-02 04:53:05.0</ContractPartyRoleLastUpdateDate>
+							<ContractPartyRoleLastUpdateUser>MDM_ETL</ContractPartyRoleLastUpdateUser>
+							<ContractRoleIdPK>2387028176</ContractRoleIdPK>
+							<PartyId>823XXXXXXXX6616</PartyId>
+							<RoleType>1</RoleType>
+							<RoleValue>投保人</RoleValue>
+							<StartDate>2017-01-02 04:53:05.0</StartDate>
+						</TCRMContractPartyRoleBObj>
+						<TCRMContractPartyRoleBObj>
+							<ContractComponentId>XXXXXXXX</ContractComponentId>
+							<ContractPartyRoleLastUpdateDate>2017-01-02 06:40:28.0</ContractPartyRoleLastUpdateDate>
+							<ContractPartyRoleLastUpdateUser>MDM_ETL</ContractPartyRoleLastUpdateUser>
+							<ContractRoleIdPK>2387228855</ContractRoleIdPK>
+							<PartyId>823XXXXXXXX6616</PartyId>
+							<RoleType>2</RoleType>
+							<RoleValue>被保人</RoleValue>
+							<StartDate>2017-01-02 06:40:28.0</StartDate>
+						</TCRMContractPartyRoleBObj>
+						<TCRMContractPartyRoleBObj>
+							<ContractComponentId>XXXXXXXX</ContractComponentId>
+							<ContractPartyRoleLastUpdateDate>2017-01-03 05:12:01.0</ContractPartyRoleLastUpdateDate>
+							<ContractPartyRoleLastUpdateUser>MDM_ETL</ContractPartyRoleLastUpdateUser>
+							<ContractRoleIdPK>XXXXXXXX</ContractRoleIdPK>
+							<DistributionPercentage>100.00</DistributionPercentage>
+							<PartyId>823XXXXXXXX6616</PartyId>
+							<RoleType>31</RoleType>
+							<RoleValue>生存受益人－第一顺序</RoleValue>
+							<StartDate>2017-01-02 00:00:00.0</StartDate>
+						</TCRMContractPartyRoleBObj>
+						<TCRMExtension>
+							<ExtendedObject>XContractComponentBObjExt</ExtendedObject>
+							<XContractComponentBObjExt>
+								<XProductCode>R46P</XProductCode>
+								<XProductName>XXXXXXXX生存金及养老金期</XProductName>
+								<XInsuredAmount>43342.80</XInsuredAmount>
+								<XContractComponentLastUpdateDate>2017-01-04 02:29:17.0</XContractComponentLastUpdateDate>
+								<XContractComponentLastUpdateUser>MDM_ETL</XContractComponentLastUpdateUser>
+							</XContractComponentBObjExt>
+						</TCRMExtension>
+					</TCRMContractComponentBObj>
+					<TCRMContractComponentBObj>
+						<ComponentID>2200030</ComponentID>
+						<ContractComponentIdPK>XXXXXXXX</ContractComponentIdPK>
+						<ContractComponentLastUpdateDate>2017-01-04 02:29:17.0</ContractComponentLastUpdateDate>
+						<ContractComponentLastUpdateUser>MDM_ETL</ContractComponentLastUpdateUser>
+						<ContractComponentType>2</ContractComponentType>
+						<ContractComponentValue>附加险</ContractComponentValue>
+						<ContractId>3566778110</ContractId>
+						<ContractStatusType>23</ContractStatusType>
+						<ContractStatusValue>有效</ContractStatusValue>
+						<TCRMAdminNativeKeyBObj>
+							<AdminContractId>G152XXXX0010102</AdminContractId>
+							<AdminFieldNameType>101</AdminFieldNameType>
+							<AdminFieldNameValue>个险保障计划编号</AdminFieldNameValue>
+							<AdminNativeKeyIdPK>1667945857</AdminNativeKeyIdPK>
+							<AdminSystemType>1</AdminSystemType>
+							<AdminSystemValue>CSC</AdminSystemValue>
+							<ContractComponentIndicator>Y</ContractComponentIndicator>
+							<ContractId>XXXXXXXX</ContractId>
+							<NativeKeyLastUpdateDate>2017-01-02 04:53:05.0</NativeKeyLastUpdateDate>
+							<NativeKeyLastUpdateUser>MDM_ETL</NativeKeyLastUpdateUser>
+						</TCRMAdminNativeKeyBObj>
+						<TCRMContractPartyRoleBObj>
+							<ContractComponentId>XXXXXXXX</ContractComponentId>
+							<ContractPartyRoleLastUpdateDate>2017-01-02 04:53:05.0</ContractPartyRoleLastUpdateDate>
+							<ContractPartyRoleLastUpdateUser>MDM_ETL</ContractPartyRoleLastUpdateUser>
+							<ContractRoleIdPK>2387028177</ContractRoleIdPK>
+							<PartyId>823XXXXXXXX6616</PartyId>
+							<RoleType>1</RoleType>
+							<RoleValue>投保人</RoleValue>
+							<StartDate>2017-01-02 04:53:05.0</StartDate>
+						</TCRMContractPartyRoleBObj>
+						<TCRMContractPartyRoleBObj>
+							<ContractComponentId>XXXXXXXX</ContractComponentId>
+							<ContractPartyRoleLastUpdateDate>2017-01-02 06:40:28.0</ContractPartyRoleLastUpdateDate>
+							<ContractPartyRoleLastUpdateUser>MDM_ETL</ContractPartyRoleLastUpdateUser>
+							<ContractRoleIdPK>2387228856</ContractRoleIdPK>
+							<PartyId>823XXXXXXXX6616</PartyId>
+							<RoleType>2</RoleType>
+							<RoleValue>被保人</RoleValue>
+							<StartDate>2017-01-02 06:40:28.0</StartDate>
+						</TCRMContractPartyRoleBObj>
+						<TCRMContractPartyRoleBObj>
+							<ContractComponentId>XXXXXXXX</ContractComponentId>
+							<ContractPartyRoleLastUpdateDate>2017-01-03 05:12:01.0</ContractPartyRoleLastUpdateDate>
+							<ContractPartyRoleLastUpdateUser>MDM_ETL</ContractPartyRoleLastUpdateUser>
+							<ContractRoleIdPK>2387373139</ContractRoleIdPK>
+							<DistributionPercentage>100.00</DistributionPercentage>
+							<PartyId>823XXXXXXXX6616</PartyId>
+							<RoleType>31</RoleType>
+							<RoleValue>生存受益人－第一顺序</RoleValue>
+							<StartDate>2017-01-02 00:00:00.0</StartDate>
+						</TCRMContractPartyRoleBObj>
+						<TCRMExtension>
+							<ExtendedObject>XContractComponentBObjExt</ExtendedObject>
+							<XContractComponentBObjExt>
+								<XProductCode>WPCP</XProductCode>
+								<XProductName>XXXXXX投保人意外豁同一人</XProductName>
+								<XInsuredAmount>30000.00</XInsuredAmount>
+								<XContractComponentLastUpdateDate>2017-01-04 02:29:17.0</XContractComponentLastUpdateDate>
+								<XContractComponentLastUpdateUser>MDM_ETL</XContractComponentLastUpdateUser>
+							</XContractComponentBObjExt>
+						</TCRMExtension>
+					</TCRMContractComponentBObj>
+					<TCRMContractComponentBObj>
+						<ComponentID>2200030</ComponentID>
+						<ContractComponentIdPK>XXXXXXXX</ContractComponentIdPK>
+						<ContractComponentLastUpdateDate>2017-01-04 02:29:17.0</ContractComponentLastUpdateDate>
+						<ContractComponentLastUpdateUser>MDM_ETL</ContractComponentLastUpdateUser>
+						<ContractComponentType>2</ContractComponentType>
+						<ContractComponentValue>附加险</ContractComponentValue>
+						<ContractId>3566778110</ContractId>
+						<ContractStatusType>23</ContractStatusType>
+						<ContractStatusValue>有效</ContractStatusValue>
+						<PremiumAmount>10.000</PremiumAmount>
+						<TCRMAdminNativeKeyBObj>
+							<AdminContractId>G152XXXX0010103</AdminContractId>
+							<AdminFieldNameType>101</AdminFieldNameType>
+							<AdminFieldNameValue>个险保障计划编号</AdminFieldNameValue>
+							<AdminNativeKeyIdPK>1667945858</AdminNativeKeyIdPK>
+							<AdminSystemType>1</AdminSystemType>
+							<AdminSystemValue>CSC</AdminSystemValue>
+							<ContractComponentIndicator>Y</ContractComponentIndicator>
+							<ContractId>XXXXXXXX</ContractId>
+							<NativeKeyLastUpdateDate>2017-01-02 04:53:05.0</NativeKeyLastUpdateDate>
+							<NativeKeyLastUpdateUser>MDM_ETL</NativeKeyLastUpdateUser>
+						</TCRMAdminNativeKeyBObj>
+						<TCRMContractPartyRoleBObj>
+							<ContractComponentId>XXXXXXXX</ContractComponentId>
+							<ContractPartyRoleLastUpdateDate>2017-01-02 04:53:05.0</ContractPartyRoleLastUpdateDate>
+							<ContractPartyRoleLastUpdateUser>MDM_ETL</ContractPartyRoleLastUpdateUser>
+							<ContractRoleIdPK>XXXXXXXX</ContractRoleIdPK>
+							<PartyId>823XXXXXXXX6616</PartyId>
+							<RoleType>1</RoleType>
+							<RoleValue>投保人</RoleValue>
+							<StartDate>2017-01-02 04:53:05.0</StartDate>
+						</TCRMContractPartyRoleBObj>
+						<TCRMContractPartyRoleBObj>
+							<ContractComponentId>XXXXXXXX</ContractComponentId>
+							<ContractPartyRoleLastUpdateDate>2017-01-02 06:40:28.0</ContractPartyRoleLastUpdateDate>
+							<ContractPartyRoleLastUpdateUser>MDM_ETL</ContractPartyRoleLastUpdateUser>
+							<ContractRoleIdPK>2387228857</ContractRoleIdPK>
+							<PartyId>823XXXXXXXX6616</PartyId>
+							<RoleType>2</RoleType>
+							<RoleValue>被保人</RoleValue>
+							<StartDate>2017-01-02 06:40:28.0</StartDate>
+						</TCRMContractPartyRoleBObj>
+						<TCRMContractPartyRoleBObj>
+							<ContractComponentId>XXXXXXXX</ContractComponentId>
+							<ContractPartyRoleLastUpdateDate>2017-01-03 05:12:01.0</ContractPartyRoleLastUpdateDate>
+							<ContractPartyRoleLastUpdateUser>MDM_ETL</ContractPartyRoleLastUpdateUser>
+							<ContractRoleIdPK>XXXXXXXX</ContractRoleIdPK>
+							<DistributionPercentage>100.00</DistributionPercentage>
+							<PartyId>823XXXXXXXX6616</PartyId>
+							<RoleType>31</RoleType>
+							<RoleValue>生存受益人－第一顺序</RoleValue>
+							<StartDate>2017-01-02 00:00:00.0</StartDate>
+						</TCRMContractPartyRoleBObj>
+						<TCRMExtension>
+							<ExtendedObject>XContractComponentBObjExt</ExtendedObject>
+							<XContractComponentBObjExt>
+								<XProductCode>RUMS</XProductCode>
+								<XProductName>XXXXXXXX年金（万能型）</XProductName>
+								<XInsuredAmount>0.00</XInsuredAmount>
+								<XUnderwriteInd10>2</XUnderwriteInd10>
+								<XContractComponentLastUpdateDate>2017-01-04 02:29:17.0</XContractComponentLastUpdateDate>
+								<XContractComponentLastUpdateUser>MDM_ETL</XContractComponentLastUpdateUser>
+							</XContractComponentBObjExt>
+						</TCRMExtension>
+					</TCRMContractComponentBObj>
+					<TCRMExtension>
+						<ExtendedObject>XContractBObjExt</ExtendedObject>
+						<XContractBObjExt>
+							<XServiceFlag>M2</XServiceFlag>
+							<XPostAddress>福建省厦门市湖XXXXXXX１</XPostAddress>
+							<XPostCode>361009</XPostCode>
+							<XMobile>1233123123</XMobile>
+							<XPremValue01>30001.00</XPremValue01>
+							<XPremValue10>0.00</XPremValue10>
+							<XContractLastUpdateDate>2017-01-05 05:22:24.0</XContractLastUpdateDate>
+							<XContractLastUpdateUser>MDM_ETL</XContractLastUpdateUser>
+						</XContractBObjExt>
+					</TCRMExtension>
+				</TCRMContractBObj>
+				<TCRMContractBObj>
+					<ComponentID>2100023</ComponentID>
+					<BusOrgunitId>4</BusOrgunitId>
+					<AgreementName>“e路XX”旅客综合交通意外伤害保险</AgreementName>
+					<AgreementNickName>107</AgreementNickName>
+					<SignedDate>2012-09-19 00:00:00.0</SignedDate>
+					<ExecutedDate>2012-09-21 00:00:00.0</ExecutedDate>
+					<EndDate>2012-09-28 00:00:00.0</EndDate>
+					<AgreementStatusType>1</AgreementStatusType>
+					<AgreementStatusValue>有效</AgreementStatusValue>
+					<ContractIdPK>XXXXXXXX</ContractIdPK>
+					<ContractLastUpdateDate>2012-09-19 16:42:36.854</ContractLastUpdateDate>
+					<ContractLastUpdateTxId>516XXXXX39137</ContractLastUpdateTxId>
+					<ContractLastUpdateUser>TOLMQ</ContractLastUpdateUser>
+					<CurrencyType>1</CurrencyType>
+					<CurrencyValue>中国人民币元</CurrencyValue>
+					<LineOfBusiness>TOL</LineOfBusiness>
+					<PremiumAmount>20.000</PremiumAmount>
+					<DWLStatus>
+						<Status>0</Status>
+					</DWLStatus>
+					<TCRMAdminNativeKeyBObj>
+						<AdminContractId>211XXXXXXXXXX9376</AdminContractId>
+						<AdminFieldNameType>5</AdminFieldNameType>
+						<AdminFieldNameValue>XX在线电子保单号</AdminFieldNameValue>
+						<AdminNativeKeyIdPK>XXXXXXXX</AdminNativeKeyIdPK>
+						<AdminSystemType>5</AdminSystemType>
+						<AdminSystemValue>TOL</AdminSystemValue>
+						<ContractComponentIndicator>N</ContractComponentIndicator>
+						<ContractId>XXXXXXXX</ContractId>
+						<NativeKeyLastUpdateDate>2012-09-19 16:42:36.919</NativeKeyLastUpdateDate>
+						<NativeKeyLastUpdateTxId>516XXXXX39137</NativeKeyLastUpdateTxId>
+						<NativeKeyLastUpdateUser>TOLMQ</NativeKeyLastUpdateUser>
+					</TCRMAdminNativeKeyBObj>
+					<TCRMContractComponentBObj>
+						<ComponentID>2200030</ComponentID>
+						<BaseIndicator>Y</BaseIndicator>
+						<ContractComponentIdPK>835XXXXX85755</ContractComponentIdPK>
+						<ContractComponentLastUpdateDate>2012-09-19 16:42:36.918</ContractComponentLastUpdateDate>
+						<ContractComponentLastUpdateTxId>516134XXXXX5639137</ContractComponentLastUpdateTxId>
+						<ContractComponentLastUpdateUser>TOLMQ</ContractComponentLastUpdateUser>
+						<ContractId>XXXXXXXX</ContractId>
+						<ContractStatusType>1</ContractStatusType>
+						<ContractStatusValue>有效</ContractStatusValue>
+						<TCRMAdminNativeKeyBObj>
+							<AdminContractId>211XXXXXXXXXX9376</AdminContractId>
+							<AdminFieldNameType>105</AdminFieldNameType>
+							<AdminFieldNameValue>XX在线保障计划编号</AdminFieldNameValue>
+							<AdminNativeKeyIdPK>XXXXXXXX</AdminNativeKeyIdPK>
+							<AdminSystemType>5</AdminSystemType>
+							<AdminSystemValue>TOL</AdminSystemValue>
+							<ContractComponentIndicator>Y</ContractComponentIndicator>
+							<ContractId>83XXXXXXXXXX5755</ContractId>
+							<NativeKeyLastUpdateDate>2012-09-19 16:42:36.904</NativeKeyLastUpdateDate>
+							<NativeKeyLastUpdateTxId>516XXXXX39137</NativeKeyLastUpdateTxId>
+							<NativeKeyLastUpdateUser>TOLMQ</NativeKeyLastUpdateUser>
+						</TCRMAdminNativeKeyBObj>
+						<TCRMContractPartyRoleBObj>
+							<ContractComponentId>83513XXXXX685755</ContractComponentId>
+							<ContractPartyRoleLastUpdateDate>2012-09-19 16:42:36.888</ContractPartyRoleLastUpdateDate>
+							<ContractPartyRoleLastUpdateTxId>5161XXXXX5639137</ContractPartyRoleLastUpdateTxId>
+							<ContractPartyRoleLastUpdateUser>TOLMQ</ContractPartyRoleLastUpdateUser>
+							<ContractRoleIdPK>6631XXXXX5688885</ContractRoleIdPK>
+							<PartyId>823XXXXXXXX6616</PartyId>
+							<RoleType>1</RoleType>
+							<RoleValue>投保人</RoleValue>
+							<StartDate>2012-09-19 16:42:36.888</StartDate>
+						</TCRMContractPartyRoleBObj>
+						<TCRMExtension>
+							<ExtendedObject>XContractComponentBObjExt</ExtendedObject>
+							<XContractComponentBObjExt>
+								<XContractComponentLastUpdateDate>2012-09-19 16:42:36.918</XContractComponentLastUpdateDate>
+								<XContractComponentLastUpdateTxId>516XXXXX39137</XContractComponentLastUpdateTxId>
+								<XContractComponentLastUpdateUser>TOLMQ</XContractComponentLastUpdateUser>
+							</XContractComponentBObjExt>
+						</TCRMExtension>
+					</TCRMContractComponentBObj>
+					<TCRMExtension>
+						<ExtendedObject>XContractBObjExt</ExtendedObject>
+						<XContractBObjExt>
+							<XContractLastUpdateDate>2012-09-19 16:42:36.854</XContractLastUpdateDate>
+							<XContractLastUpdateTxId>5161XXXXX639137</XContractLastUpdateTxId>
+							<XContractLastUpdateUser>TOLMQ</XContractLastUpdateUser>
+						</XContractBObjExt>
+					</TCRMExtension>
+				</TCRMContractBObj>
+				<TCRMContractBObj>
+					<ComponentID>2100023</ComponentID>
+					<BusOrgunitId>2</BusOrgunitId>
+					<AgreementName>XX“XXXXXX”航空保障计划</AgreementName>
+					<AgreementNickName>345</AgreementNickName>
+					<SignedDate>2014-10-19 00:00:00.0</SignedDate>
+					<ExecutedDate>2014-10-19 00:00:00.0</ExecutedDate>
+					<EndDate>2015-10-19 00:00:00.0</EndDate>
+					<AgreementStatusType>1</AgreementStatusType>
+					<AgreementStatusValue>有效</AgreementStatusValue>
+					<ContractIdPK>99XXXX750230951</ContractIdPK>
+					<ContractLastUpdateDate>2014-10-19 16:31:42.309</ContractLastUpdateDate>
+					<ContractLastUpdateTxId>6501XXXXX0213560</ContractLastUpdateTxId>
+					<ContractLastUpdateUser>TOLMQ</ContractLastUpdateUser>
+					<CurrencyType>1</CurrencyType>
+					<CurrencyValue>中国人民币元</CurrencyValue>
+					<LineOfBusiness>TOL</LineOfBusiness>
+					<PremiumAmount>3.680</PremiumAmount>
+					<DWLStatus>
+						<Status>0</Status>
+					</DWLStatus>
+					<TCRMAdminNativeKeyBObj>
+						<AdminContractId>23143XXXX148342</AdminContractId>
+						<AdminFieldNameType>5</AdminFieldNameType>
+						<AdminFieldNameValue>XX在线电子保单号</AdminFieldNameValue>
+						<AdminNativeKeyIdPK>4811XXXXX32139</AdminNativeKeyIdPK>
+						<AdminSystemType>5</AdminSystemType>
+						<AdminSystemValue>TOL</AdminSystemValue>
+						<ContractComponentIndicator>N</ContractComponentIndicator>
+						<ContractId>990141370750230951</ContractId>
+						<NativeKeyLastUpdateDate>2014-10-19 16:31:42.321</NativeKeyLastUpdateDate>
+						<NativeKeyLastUpdateTxId>65014XXXXX13560</NativeKeyLastUpdateTxId>
+						<NativeKeyLastUpdateUser>TOLMQ</NativeKeyLastUpdateUser>
+					</TCRMAdminNativeKeyBObj>
+					<TCRMContractComponentBObj>
+						<ComponentID>2200030</ComponentID>
+						<BaseIndicator>Y</BaseIndicator>
+						<ContractComponentIdPK>XXXXXXXX</ContractComponentIdPK>
+						<ContractComponentLastUpdateDate>2014-10-19 16:31:42.32</ContractComponentLastUpdateDate>
+						<ContractComponentLastUpdateTxId>650141370750213560</ContractComponentLastUpdateTxId>
+						<ContractComponentLastUpdateUser>TOLMQ</ContractComponentLastUpdateUser>
+						<ContractId>990141XXXXX230951</ContractId>
+						<ContractStatusType>1</ContractStatusType>
+						<ContractStatusValue>有效</ContractStatusValue>
+						<TCRMAdminNativeKeyBObj>
+							<AdminContractId>23143451XXXXX48342</AdminContractId>
+							<AdminFieldNameType>105</AdminFieldNameType>
+							<AdminFieldNameValue>XX在线保障计划编号</AdminFieldNameValue>
+							<AdminNativeKeyIdPK>9861XXXX231873</AdminNativeKeyIdPK>
+							<AdminSystemType>5</AdminSystemType>
+							<AdminSystemValue>TOL</AdminSystemValue>
+							<ContractComponentIndicator>Y</ContractComponentIndicator>
+							<ContractId>646XXXXX0231393</ContractId>
+							<NativeKeyLastUpdateDate>2014-10-19 16:31:42.319</NativeKeyLastUpdateDate>
+							<NativeKeyLastUpdateTxId>650XXXXX213560</NativeKeyLastUpdateTxId>
+							<NativeKeyLastUpdateUser>TOLMQ</NativeKeyLastUpdateUser>
+						</TCRMAdminNativeKeyBObj>
+						<TCRMContractPartyRoleBObj>
+							<ContractComponentId>XXXXXXXX</ContractComponentId>
+							<ContractPartyRoleLastUpdateDate>2014-10-19 16:31:42.317</ContractPartyRoleLastUpdateDate>
+							<ContractPartyRoleLastUpdateTxId>6501XXXXX13560</ContractPartyRoleLastUpdateTxId>
+							<ContractPartyRoleLastUpdateUser>TOLMQ</ContractPartyRoleLastUpdateUser>
+							<ContractRoleIdPK>6711XXXXX1736</ContractRoleIdPK>
+							<PartyId>823XXXXX6616</PartyId>
+							<RoleType>1</RoleType>
+							<RoleValue>投保人</RoleValue>
+							<StartDate>2014-10-19 16:31:42.317</StartDate>
+						</TCRMContractPartyRoleBObj>
+						<TCRMExtension>
+							<ExtendedObject>XContractComponentBObjExt</ExtendedObject>
+							<XContractComponentBObjExt>
+								<XContractComponentLastUpdateDate>2014-10-19 16:31:42.32</XContractComponentLastUpdateDate>
+								<XContractComponentLastUpdateTxId>650141XXXXX13560</XContractComponentLastUpdateTxId>
+								<XContractComponentLastUpdateUser>TOLMQ</XContractComponentLastUpdateUser>
+							</XContractComponentBObjExt>
+						</TCRMExtension>
+					</TCRMContractComponentBObj>
+					<TCRMExtension>
+						<ExtendedObject>XContractBObjExt</ExtendedObject>
+						<XContractBObjExt>
+							<XContractLastUpdateDate>2014-10-19 16:31:42.309</XContractLastUpdateDate>
+							<XContractLastUpdateTxId>6501XXXXX213560</XContractLastUpdateTxId>
+							<XContractLastUpdateUser>TOLMQ</XContractLastUpdateUser>
+						</XContractBObjExt>
+					</TCRMExtension>
+				</TCRMContractBObj>
+				<TCRMPersonBObj>
+					<ComponentID>XXXXXXXX</ComponentID>
+					<ClientImportanceType>15</ClientImportanceType>
+					<ClientImportanceValue>金卡</ClientImportanceValue>
+					<ClientPotentialType>1</ClientPotentialType>
+					<ClientPotentialValue>客户</ClientPotentialValue>
+					<CreatedDate>2012-06-13 09:39:37.153</CreatedDate>
+					<SinceDate>2012-06-13 09:39:37.212</SinceDate>
+					<DisplayName>吴XX</DisplayName>
+					<PartyActiveIndicator>Y</PartyActiveIndicator>
+					<PartyId>823XXXXXXXX6616</PartyId>
+					<PartyLastUpdateDate>2017-01-03 11:53:08.0</PartyLastUpdateDate>
+					<PartyLastUpdateTxId>1911XXXXXXXX070</PartyLastUpdateTxId>
+					<PartyLastUpdateUser>MDM_ETL</PartyLastUpdateUser>
+					<PartyType>P</PartyType>
+					<BirthDate>1985-05-24 00:00:00.0</BirthDate>
+					<CitizenshipType>36</CitizenshipType>
+					<CitizenshipValue>中国</CitizenshipValue>
+					<GenderType>F</GenderType>
+					<HighestEducationType>6</HighestEducationType>
+					<HighestEducationValue>本科</HighestEducationValue>
+					<MaritalStatusType>1</MaritalStatusType>
+					<MaritalStatusValue>未婚</MaritalStatusValue>
+					<PersonLastUpdateDate>2017-01-03 11:53:08.0</PersonLastUpdateDate>
+					<PersonLastUpdateTxId>XXXXXXXX</PersonLastUpdateTxId>
+					<PersonLastUpdateUser>MDM_ETL</PersonLastUpdateUser>
+					<PersonPartyId>823XXXXXXXX6616</PersonPartyId>
+					<TCRMPartyIdentificationBObj>
+						<IdentificationIdPK>4501339XXXXXXX1160</IdentificationIdPK>
+						<IdentificationNumber>XXXXXXXX</IdentificationNumber>
+						<IdentificationType>1</IdentificationType>
+						<IdentificationValue>身份证</IdentificationValue>
+						<PartyId>823XXXXXXXX6616</PartyId>
+						<PartyIdentificationLastUpdateDate>2017-01-01 22:56:59.661</PartyIdentificationLastUpdateDate>
+						<PartyIdentificationLastUpdateTxId>19114XXXXX0070</PartyIdentificationLastUpdateTxId>
+						<PartyIdentificationLastUpdateUser>CSCMQ</PartyIdentificationLastUpdateUser>
+						<StartDate>2012-06-13 09:39:37.211</StartDate>
+					</TCRMPartyIdentificationBObj>
+					<TCRMAdminContEquivBObj>
+						<AdminContEquivIdPK>XXXXXXXX</AdminContEquivIdPK>
+						<AdminPartyId>2159092538</AdminPartyId>
+						<AdminSystemType>3</AdminSystemType>
+						<AdminSystemValue>EBA</AdminSystemValue>
+						<ContEquivLastUpdateDate>2012-06-13 09:39:37.212</ContEquivLastUpdateDate>
+						<ContEquivLastUpdateTxId>37913XXXXX714951</ContEquivLastUpdateTxId>
+						<ContEquivLastUpdateUser>EBABatch</ContEquivLastUpdateUser>
+						<PartyId>8231XXXXX6616</PartyId>
+					</TCRMAdminContEquivBObj>
+					<TCRMAdminContEquivBObj>
+						<AdminContEquivIdPK>XXXXXXXX</AdminContEquivIdPK>
+						<AdminPartyId>29101652</AdminPartyId>
+						<AdminSystemType>5</AdminSystemType>
+						<AdminSystemValue>TOL</AdminSystemValue>
+						<ContEquivLastUpdateDate>2012-09-19 16:42:36.782</ContEquivLastUpdateDate>
+						<ContEquivLastUpdateTxId>51613XXXXX39137</ContEquivLastUpdateTxId>
+						<ContEquivLastUpdateUser>TOLMQ</ContEquivLastUpdateUser>
+						<PartyId>82313XXXXX6616</PartyId>
+					</TCRMAdminContEquivBObj>
+					<TCRMAdminContEquivBObj>
+						<AdminContEquivIdPK>395148328197493905</AdminContEquivIdPK>
+						<AdminPartyId>48582785</AdminPartyId>
+						<AdminSystemType>1</AdminSystemType>
+						<AdminSystemValue>CSC</AdminSystemValue>
+						<ContEquivLastUpdateDate>2017-01-01 22:46:14.939</ContEquivLastUpdateDate>
+						<ContEquivLastUpdateTxId>XXXXXXXX</ContEquivLastUpdateTxId>
+						<ContEquivLastUpdateUser>CSCMQ</ContEquivLastUpdateUser>
+						<PartyId>823XXXXXXXX6616</PartyId>
+					</TCRMAdminContEquivBObj>
+					<TCRMPersonNameBObj>
+						<LastName>吴XX</LastName>
+						<LastUpdatedBy>CSCMQ</LastUpdatedBy>
+						<LastUpdatedDate>2017-01-01 22:56:59.626</LastUpdatedDate>
+						<NameUsageType>1</NameUsageType>
+						<NameUsageValue>法律</NameUsageValue>
+						<PersonNameIdPK>440133955157718575</PersonNameIdPK>
+						<PersonNameLastUpdateDate>2017-01-01 22:56:59.626</PersonNameLastUpdateDate>
+						<PersonNameLastUpdateTxId>XXXXXXXX</PersonNameLastUpdateTxId>
+						<PersonNameLastUpdateUser>CSCMQ</PersonNameLastUpdateUser>
+						<PersonPartyId>823XXXXXXXX6616</PersonPartyId>
+						<StartDate>2012-06-13 09:39:37.185</StartDate>
+						<StdLastName>吴XX</StdLastName>
+					</TCRMPersonNameBObj>
+					<TCRMExtension>
+						<ExtendedObject>XPersonBObjExt</ExtendedObject>
+						<XPersonBObjExt>
+							<XOccupationTpCdType>538</XOccupationTpCdType>
+							<XOccupationTpCdValue>商业-外务员</XOccupationTpCdValue>
+							<XRiskValue01>30001.00</XRiskValue01>
+							<XRiskValue02>1.00</XRiskValue02>
+							<XRiskValue09>1.00</XRiskValue09>
+							<XRiskValue10>1.00</XRiskValue10>
+							<XPersonLastUpdateDate>2017-01-03 11:53:08.0</XPersonLastUpdateDate>
+							<XPersonLastUpdateTxId>XXXXXXXX</XPersonLastUpdateTxId>
+							<XPersonLastUpdateUser>MDM_ETL</XPersonLastUpdateUser>
+						</XPersonBObjExt>
+					</TCRMExtension>
+				</TCRMPersonBObj>
+			</TCRMFSPartyBObj>
+		</ResponseObject>
+	</TxResponse>
+</TCRMService>

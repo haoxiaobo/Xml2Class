@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TCRMService SYSTEM "myTCRM.dtd">
+<TCRMService>
+    <RequestControl>
+        <requestID>1002</requestID>
+        <DWLControl>
+            <requesterName>WECHATXXXX</requesterName>
+            <requesterLanguage>400</requesterLanguage>
+        </DWLControl>
+    </RequestControl>
+    <TCRMTx>
+        <TCRMTxType>searchPerson</TCRMTxType>
+        <TCRMTxObject>TCRMPersonSearchBObj</TCRMTxObject>
+        <TCRMObject>
+            <TCRMPersonSearchBObj>
+                <IdentificationType>1</IdentificationType>
+                <IdentificationNum>3508021XXXXXXX5023</IdentificationNum>
+                <PartyFilter>ACTIVE</PartyFilter>
+            </TCRMPersonSearchBObj>
+        </TCRMObject>
+    </TCRMTx>
+</TCRMService>

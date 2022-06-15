@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TCRMService SYSTEM  "tCRMResponse.dtd">
+<TCRMService>
+	<ResponseControl>
+		<ResultCode>SUCCESS</ResultCode>
+		<ServiceTime>56</ServiceTime>
+		<DWLControl>
+			<requesterLanguage>400</requesterLanguage>
+			<requesterLocale>zh</requesterLocale>
+			<requesterName>WECHATXXXX</requesterName>
+			<requestID>1002</requestID>
+		</DWLControl>
+	</ResponseControl>
+	<TxResponse>
+		<RequestType>searchPerson</RequestType>
+		<TxResult>
+			<ResultCode>SUCCESS</ResultCode>
+		</TxResult>
+		<ResponseObject>
+			<TCRMPersonSearchResultBObj>
+				<ComponentID>1014</ComponentID>
+				<AddressId>947148328261971874</AddressId>
+				<AddrLineOne>福建省XXXXX里区XXXXXXXXXXXXXXXX</AddrLineOne>
+				<CityName>N/A</CityName>
+				<IdentificationNum>350802XXXXXXXXX5023</IdentificationNum>
+				<IdentificationType>1</IdentificationType>
+				<PartyId>823XXXXXXXX6616</PartyId>
+				<ZipPostalCode>361009</ZipPostalCode>
+				<DateOfBirth>1985-05-24 00:00:00.0</DateOfBirth>
+				<Gender>F</Gender>
+				<IdentificationTypeValue>身份证</IdentificationTypeValue>
+				<PartyActiveIndicator>Y</PartyActiveIndicator>
+				<PnLastName>吴XXXX</PnLastName>
+				<ResultNumber>1</ResultNumber>
+				<ResultScore>150</ResultScore>
+				<ResultsFound>1</ResultsFound>
+			</TCRMPersonSearchResultBObj>
+		</ResponseObject>
+	</TxResponse>
+</TCRMService>

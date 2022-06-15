@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TCRMService  xmlns="http://www.ibm.com/mdm/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ibm.com/mdm/schema MDMDomains.xsd">
+    <ResponseControl>
+        <ResultCode>SUCCESS</ResultCode>
+        <ServiceTime>353</ServiceTime>
+        <DWLControl>
+            <requesterName>WECHATXXXX</requesterName>
+            <requesterLanguage>400</requesterLanguage>
+            <requesterLocale>zh</requesterLocale>
+            <requestID>201XXXXX0322</requestID>
+        </DWLControl>
+    </ResponseControl>
+    <TxResponse>
+        <RequestType>getBriefContractsByParty</RequestType>
+        <TxResult>
+            <ResultCode>SUCCESS</ResultCode>
+        </TxResult>
+        <ResponseObject>
+            <!-- 保单信息（可能多条） -->
+            <TCRMContractBObj>
+                <ContractIdPK>XXXXXXXX</ContractIdPK>
+                <LineOfBusiness>CSC</LineOfBusiness>
+                <FrequencyModeType>1</FrequencyModeType>
+                <FrequencyModeValue>每年</FrequencyModeValue>
+                <BillingType>3</BillingType>
+                <BillingValue>转账收费</BillingValue>
+                <PremiumAmount>4484.100</PremiumAmount>
+                <NextBillingDate>2012-07-30 00:00:00.0</NextBillingDate>
+                <ServiceOrgName>P10</ServiceOrgName>
+                <BusOrgunitId>P</BusOrgunitId>
+		<!-- 保单名称 -->
+                <AgreementName>XXXXXX幸福版</AgreementName>
+                <AgreementNickName>FNP</AgreementNickName>
+		<!-- 生效日 -->
+                <ExecutedDate>2004-07-30 00:00:00.0</ExecutedDate>
+                <AgreementStatusType>23</AgreementStatusType>
+		<!-- 保单状态 -->
+                <AgreementStatusValue>有效</AgreementStatusValue>
+                <TCRMExtension>
+                    <ExtendedObject>XContractBObjExt</ExtendedObject>
+                    <XContractBObjExt>
+			<!-- 渠道 -->
+                        <XServiceFlag>AG</XServiceFlag>
+                        <XPostAddress>XX金融大SXXXX术部</XPostAddress>
+                        <XPostCode>650031</XPostCode>
+                        <XTelephone>31231231</XTelephone>
+                        <XMobile>13912345678</XMobile>
+                        <XEmail>test@test.com</XEmail>
+                        <XPremValue01>4484.10</XPremValue01>
+                    </XContractBObjExt>
+                </TCRMExtension>
+                <TCRMAdminNativeKeyBObj>
+                    <AdminNativeKeyIdPK>1500953859</AdminNativeKeyIdPK>
+                    <!-- 保单号 -->
+                    <AdminContractId>P04060652</AdminContractId>
+                    <AdminFieldNameType>1</AdminFieldNameType>
+                    <AdminFieldNameValue>个险保单号</AdminFieldNameValue>
+                </TCRMAdminNativeKeyBObj>
+                <ContractSpecValueBObj>
+                    <!-- 被保人姓名（可能多个） -->
+                    <AttributeValueBObj>
+                        <SpecValueXML>XXXXXX</SpecValueXML>
+                    </AttributeValueBObj>
+                    <AttributeValueBObj>
+                        <SpecValueXML>XXX</SpecValueXML>
+                    </AttributeValueBObj>
+                    <AttributeValueBObj>
+                        <SpecValueXML>XXXX</SpecValueXML>
+                    </AttributeValueBObj>
+                    <ComponentID>4153</ComponentID>
+                </ContractSpecValueBObj>
+                <ComponentID>1000266</ComponentID>
+            </TCRMContractBObj>
+            <TCRMContractBObj>
+                <ContractIdPK>XXXXXXXX</ContractIdPK>
+                <LineOfBusiness>CSC</LineOfBusiness>
+                <FrequencyModeType>1</FrequencyModeType>
+                <FrequencyModeValue>每年</FrequencyModeValue>
+                <BillingType>3</BillingType>
+                <BillingValue>转账收费</BillingValue>
+                <PremiumAmount>1220.000</PremiumAmount>
+                <NextBillingDate>2012-09-01 00:00:00.0</NextBillingDate>
+                <ServiceOrgName>P10</ServiceOrgName>
+                <BusOrgunitId>P</BusOrgunitId>
+                <AgreementName>XXXXXX定期保险</AgreementName>
+                <AgreementNickName>801</AgreementNickName>
+                <ExecutedDate>2007-09-01 00:00:00.0</ExecutedDate>
+                <AgreementStatusType>23</AgreementStatusType>
+                <AgreementStatusValue>有效</AgreementStatusValue>
+                <TCRMExtension>
+                    <ExtendedObject>XContractBObjExt</ExtendedObject>
+                    <XContractBObjExt>
+                        <XServiceFlag>AG</XServiceFlag>
+                        <XPostAddress>XX金融大XXXXX术部</XPostAddress>
+                        <XPostCode>650031</XPostCode>
+                        <XTelephone>XXXXXXXX</XTelephone>
+                        <XMobile>13912345678</XMobile>
+                        <XEmail>test@test.com</XEmail>
+                        <XPremValue01>1220.00</XPremValue01>
+                    </XContractBObjExt>
+                </TCRMExtension>
+                <TCRMAdminNativeKeyBObj>
+                    <AdminNativeKeyIdPK>XXXXXXXX</AdminNativeKeyIdPK>
+                    <AdminContractId>XXXXXXXX</AdminContractId>
+                    <AdminFieldNameType>1</AdminFieldNameType>
+                    <AdminFieldNameValue>个险保单号</AdminFieldNameValue>
+                </TCRMAdminNativeKeyBObj>
+                <ContractSpecValueBObj>
+                    <AttributeValueBObj>
+                        <SpecValueXML>朱XXXX</SpecValueXML>
+                    </AttributeValueBObj>
+                    <ComponentID>4153</ComponentID>
+                </ContractSpecValueBObj>
+                <ComponentID>1000266</ComponentID>
+            </TCRMContractBObj>
+            <TCRMContractBObj>
+                <ContractIdPK>413XXXXX845701</ContractIdPK>
+                <LineOfBusiness>TOL</LineOfBusiness>
+                <PremiumAmount>4.260</PremiumAmount>
+                <BusOrgunitId>5</BusOrgunitId>
+                <AgreementName>交通工XXXXX计划</AgreementName>
+                <AgreementNickName>74</AgreementNickName>
+                <SignedDate>2010-03-02 00:00:00.0</SignedDate>
+                <ExecutedDate>2010-03-04 00:00:00.0</ExecutedDate>
+                <EndDate>2010-03-12 00:00:00.0</EndDate>
+                <AgreementStatusType>36</AgreementStatusType>
+                <AgreementStatusValue>保单责任终止</AgreementStatusValue>
+                <TCRMExtension>
+                    <ExtendedObject>XContractBObjExt</ExtendedObject>
+                    <XContractBObjExt>
+                    </XContractBObjExt>
+                </TCRMExtension>
+                <TCRMAdminNativeKeyBObj>
+                    <AdminNativeKeyIdPK>331XXXXXX85031</AdminNativeKeyIdPK>
+                    <AdminContractId>211XXXXX3545</AdminContractId>
+                    <AdminFieldNameType>5</AdminFieldNameType>
+                    <AdminFieldNameValue>XX在线电子保单号</AdminFieldNameValue>
+                </TCRMAdminNativeKeyBObj>
+                <ComponentID>1000266</ComponentID>
+            </TCRMContractBObj>
+        </ResponseObject>
+    </TxResponse>
+</TCRMService>
